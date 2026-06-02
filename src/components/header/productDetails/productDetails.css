@@ -1,0 +1,115 @@
+.item_details {
+  padding: 50px 0;
+}
+/* .item_details .container .product_wrapper .imgs_item {
+  background-color: rebeccapurple;
+} */
+.item_details .container .product_wrapper .imgs_item .big_img {
+  box-shadow: #f5f7f7 2px 2px 3px;
+  border-radius: 15px;
+}
+.item_details .container .product_wrapper .imgs_item .big_img img {
+  max-height: 60vh;
+  width: 360px;
+}
+.item_details .container .product_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px;
+}
+.item_details .imgs_item {
+  width: 40%;
+  padding-top: 80px;
+}
+.item_details .imgs_item .sm_img {
+  cursor: pointer;
+  justify-content: space-between;
+  display: flex;
+}
+.item_details .imgs_item .sm_img img {
+  width: 24%;
+  object-fit: cover;
+}
+.item_details .product_info {
+  width: 58%;
+  margin-top: 40px;
+}
+
+.item_details .product_info .title {
+  margin-bottom: 30px;
+  color: var(--main_color);
+}
+.item_details .product_info .rating {
+  margin: 15px 0;
+  display: flex;
+  gap: 5px;
+}
+
+.item_details .product_info .rating svg {
+  fill: #f3a616;
+  font-size: 20px;
+}
+.item_details .product_info .price {
+  font-size: 22px;
+  margin: 20px 0;
+  color: var(--p_color);
+}
+.item_details .product_info strong {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: var(--main_color);
+}
+.item_details .product_info .description {
+  line-height: 1.5;
+}
+
+.item_details .product_info .description .stock {
+  color: var(--main_color);
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.item_details .product_info .alert {
+  color: var(--main_color);
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.item_details .product_info .actions .add_to_cart {
+  border-radius: 4px;
+  color: white;
+  font-size: 15px;
+  padding: 10px 15px;
+  background-color: var(--main_color);
+}
+
+/* /////////// */
+
+.add_to_cart:hover {
+  transition: 1s;
+  transform: scale(1.2);
+}
+.actions .icons span {
+  background-color: var(--bg_color);
+  border-radius: 50%;
+  padding: 0px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* /// */
+.actions .icons span:hover {
+  background-color: var(--main_color);
+  transition: 0.6s;
+  transform: scale(1.2);
+}
+.actions .icons:hover svg {
+  color: white;
+  transition: 0.6s;
+}

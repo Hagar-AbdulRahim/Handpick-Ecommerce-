@@ -1,0 +1,15 @@
+/* ===== صورة المنتج ===== */
+.loading_Item .item_details .imgs_item {
+  height: 600px;
+}
+
+/* ===== قسم التفاصيل ===== */
+.loading_Item .item_details .details_item {
+  height: 600px;
+  padding-top: 100px;
+}
+
+.loading_Item .item_details .details_item h5 {
+  margin-bottom: 50px;
+  height: 30px;
+}

@@ -1,0 +1,115 @@
+.slideProduct {
+  margin-top: 90px;
+}
+
+.titleOfSlide {
+}
+.topSlide {
+  text-transform: capitalize;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 8px;
+  border-bottom: 1 solid var(--border_color);
+  padding: 15px 20px 20px 0;
+}
+
+.topSlide::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  background-color: (var(--main_color));
+}
+.brcontainer {
+  position: relative;
+  background-color: var(--border_color);
+  height: 3px;
+  width: 100%;
+  margin: auto;
+}
+.brlong {
+  position: absolute;
+  background-color: var(--main_color);
+  height: 3px;
+  width: 15%;
+}
+
+/* //////// */
+.slideContainer {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 40px;
+  width: 18vw;
+  height: 60vh;
+  background-color: var(--white_color);
+  border-radius: 20px;
+  padding: 25px 15px;
+  border: 1px solid var(--border_color);
+}
+.slideContainer:hover {
+  box-shadow: 10px 10px 15px #9494943e;
+  border: 1px solid var(--main_color);
+}
+.imgContainer {
+  height: 60%;
+  width: 80%;
+  margin: auto;
+  box-shadow: #f4f2f1 1px 1px 1px;
+}
+.imgContainer img {
+  height: 100%;
+  width: 100%;
+}
+.slideContainer .ProductTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  color: var(--color_heading);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 19px;
+  padding: 5px;
+  margin: 10px;
+}
+.slideContainer .stars svg {
+  fill: #f3a616;
+  font-size: 18px;
+}
+.slideContainer p.price {
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--main_color);
+}
+/* /////////// */
+.slideContainer .icons {
+  top: 50px;
+  transform: translateY(-10%);
+  right: -70px;
+}
+.slideContainer:hover .icons {
+  right: 10px;
+  transition: 1s;
+}
+.slideContainer .icons span {
+  background-color: var(--bg_color);
+  border-radius: 20%;
+  padding: 7px;
+  cursor: pointer;
+}
+
+/* ///////// */
+
+.slideContainer.incart .cartSuccessffully.incart {
+  color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.slideContainer.incart .icon1 {
+  background-color: var(--main_color);
+  color: var(--white_color);
+}

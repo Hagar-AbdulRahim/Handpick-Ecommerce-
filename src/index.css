@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lustria&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Playwrite+MX+Guides&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lustria&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Playwrite+MX+Guides&display=swap');
+
+/* /// */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lustria&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Playwrite+MX+Guides&display=swap');
+/* font-family: "Inter", sans-serif;
+    font-family: "DM Sans", sans-serif; */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main_color: #247881;
+  --p_color: #686868;
+  --bg_color: #ececec;
+  --white_color: #ffffff;
+  --color_heading: #828282;
+  --border_color: #d8d9cf;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+}
+img {
+  width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color_heading);
+  font-family: 'DM Sans', sans-serif;
+}
+span {
+  color: var(--main_color);
+}
+p {
+  color: var(--p_color);
+}
+input,
+button,
+select,
+textarea {
+  outline: none;
+  border: none;
+}
+a {
+  text-decoration: none;
+  color: var(--color_heading);
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1350px;
+}
+
+/* Loading */
+
+/* ===== Skeleton Effect ===== */
+.skeltion {
+  background-color: #e2e5e7;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0)
+  );
+  background-size: 40px 100%;
+  background-repeat: no-repeat;
+  background-position: left -40px top 0;
+  animation: shine 1s ease infinite;
+}
+
+/* ===== Animation ===== */
+@keyframes shine {
+  to {
+    background-position: right -40px top 0;
+  }
+}
+
+/* Toast */
+/* 
+.toast-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  background-color: var(--white_color);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 280px;
+}
+
+.toast-img {
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.toast-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.toast-content strong {
+  font-size: 12px;
+  color: var(--color_heading);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  font-weight: 600;
+}
+
+.toast-content p {
+  font-size: 11px;
+  color: var(--p_color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  margin: 0;
+}
+
+.toast-wrapper button {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  padding: 2px;
+  border-radius: 3px;
+  background-color: var(--bg_color);
+  color: var(--color_heading);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.toast-wrapper button:hover {
+  background-color: #ddd;
+  color: var(--main_color);
+}
+
+ */
+
+.toast-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background-color: var(--white_color);
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  max-width: 320px;
+  border-left: 3px solid var(--main_color);
+  box-sizing: border-box;
+}
+
+.toast-img {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.toast-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.toast-content strong {
+  font-size: 13px;
+  color: var(--color_heading);
+  font-weight: 600;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.toast-content p {
+  font-size: 11px;
+  color: var(--p_color);
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* زرار View - مستطيل صغير */
+.toast-view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--main_color);
+  background: transparent;
+  border: 1.5px solid var(--main_color);
+  border-radius: 5px;
+  padding: 3px 9px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.toast-view-btn:hover {
+  background: var(--main_color);
+  color: #fff;
+}
+
+/* زرار Close */
+.toast-close-btn {
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  padding: 0;
+  border-radius: 6px;
+  background: var(--bg_color);
+  color: var(--color_heading);
+  border: 0.5px solid #ddd;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.toast-close-btn:hover {
+  background: #ddd;
+  color: var(--main_color);
+}

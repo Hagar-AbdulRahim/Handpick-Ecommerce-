@@ -1,0 +1,16 @@
+/* ===== Slide Product Loading ===== */
+.loading_SlideProduct .top_slide {
+  height: 105px;
+}
+
+.loading_SlideProduct .top_slide h2 {
+  height: 35px;
+  width: 250px;
+}
+
+.loading_SlideProduct .top_slide p {
+  height: 25px;
+  width: 350px;
+}
+
+/* ===== Skeleton Effect (مشترك) ===== */

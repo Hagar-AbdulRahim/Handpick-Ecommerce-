@@ -1,0 +1,405 @@
+:root {
+  --shadow_light: 0 2px 15px rgba(0, 0, 0, 0.05);
+  --shadow_medium: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Layout Structure --- */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: var(--white_color);
+  box-shadow: var(--shadow_light);
+}
+
+/* --- Top Header --- */
+.top_header {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border_color);
+  background: var(--white_color);
+}
+
+.top_header .logo {
+  width: 100px;
+  height: auto;
+  transition: var(--transition);
+}
+
+.top_header .logo:hover {
+  transform: scale(1.05);
+}
+
+/* --- Search Box Modern Design --- */
+.top_header .search_box {
+  width: 100%;
+  max-width: 550px;
+  display: flex;
+  background-color: var(--bg_color);
+  border-radius: 50px;
+  border: 1.5px solid transparent;
+  transition: var(--transition);
+  margin: 0 30px;
+}
+
+.top_header .search_box:focus-within {
+  border-color: var(--main_color);
+  background-color: var(--white_color);
+  box-shadow: 0 0 0 4px rgba(0, 144, 240, 0.1);
+}
+
+.top_header .search_box input {
+  flex: 1;
+  height: 46px;
+  border: none;
+  background: transparent;
+  padding: 0 25px;
+  font-size: 15px;
+  outline: none;
+  color: var(--color_heading);
+}
+
+.top_header .search_box input::placeholder {
+  color: var(--p_color);
+}
+
+.top_header .search_box button {
+  width: 55px;
+  height: 46px;
+  background-color: var(--main_color);
+  border: none;
+  border-radius: 0 50px 50px 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 18px;
+}
+
+.top_header .search_box button:hover {
+  background-color: var(--main_hover);
+  box-shadow: 0 2px 8px rgba(0, 144, 240, 0.3);
+}
+
+/* --- Header Icons --- */
+.top_header .header_icon {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.top_header .header_icon .icon {
+  position: relative;
+  color: var(--color_heading);
+  transition: var(--transition);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.top_header .header_icon .icon:hover {
+  color: var(--main_color);
+  transform: translateY(-2px);
+}
+
+.top_header .header_icon .icon .count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: var(--main_color);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--white_color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Bottom Header (Navigation) --- */
+.bottom-header {
+  background: linear-gradient(135deg, var(--main_color) 0%, #0076c5 100%);
+  height: 48px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 144, 240, 0.15);
+}
+
+.bottom-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+/* --- Navigation Links --- */
+.bottom-nav .nav-link {
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-weight: 500;
+  font-size: 14.5px;
+  padding: 0 15px !important;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.bottom-nav .nav-link:hover {
+  color: white !important;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Animated underline for nav links */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: white;
+  transition: var(--transition);
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 80%;
+}
+
+/* --- Category Dropdown Styling --- */
+.dropdown-menu {
+  background-color: var(--white_color);
+  border: 1px solid var(--border_color);
+  border-radius: 8px;
+  box-shadow: var(--shadow_medium);
+  max-height: 400px;
+  overflow-y: auto;
+  animation: dropdownSlide 0.2s ease;
+}
+
+@keyframes dropdownSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar styling for dropdown */
+.dropdown-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+.dropdown-menu .dropdown-item {
+  padding: 12px 20px;
+  color: var(--color_heading);
+  transition: var(--transition);
+  border-left: 3px solid transparent;
+  font-weight: 500;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: var(--bg_color);
+  color: var(--main_color);
+  border-left-color: var(--main_color);
+  padding-left: 25px;
+}
+
+/* --- Dropdown toggle for categories --- */
+.nav-link.dropdown-toggle::after {
+  content: '▼';
+  position: static;
+  font-size: 11px;
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.nav-link.dropdown-toggle[aria-expanded='true']::after {
+  transform: rotate(180deg);
+}
+
+/* --- Auth Section --- */
+.auth-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.auth-section .auth-link {
+  color: white !important;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 6px 18px;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-section .auth-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: white;
+  transform: translateY(-2px);
+}
+
+.auth-section .auth-link.register {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.auth-section .auth-link.register:hover {
+  background: white;
+  color: var(--main_color) !important;
+  border-color: white;
+}
+
+/* --- Fixed Header with Content Margin --- */
+.top_OF_Slider {
+  margin-top: 123px !important;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+  .bottom-nav {
+    gap: 5px;
+  }
+
+  .bottom-nav .nav-link {
+    padding: 0 10px !important;
+    font-size: 13px;
+  }
+
+  .auth-section {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top_header {
+    height: 65px;
+  }
+
+  .top_header .logo {
+    width: 80px;
+  }
+
+  .top_header .search_box {
+    max-width: 300px;
+    margin: 0 15px;
+  }
+
+  .top_header .header_icon {
+    gap: 20px;
+  }
+
+  .bottom-header {
+    height: auto;
+  }
+
+  .bottom-nav {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .bottom-nav .nav-link {
+    width: 100%;
+    padding: 12px 15px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .dropdown-menu {
+    max-height: 300px;
+  }
+
+  .auth-section {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .auth-section .auth-link {
+    flex: 1;
+    padding: 10px 15px;
+  }
+}
+
+/* --- Top Header Fix --- */
+.top_header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 75px;
+  gap: 20px; /* مسافة بين اللوجو والبحث والأيقونات */
+}
+
+.top_header .logo {
+  width: 80px;
+  flex-shrink: 0; /* يمنع اللوجو من الصغر */
+}
+
+.top_header .search_box {
+  flex: 1; /* يخلي البحث ياخد المساحة المتاحة في النص فقط */
+  max-width: 600px;
+  display: flex;
+  background-color: var(--bg_color);
+  border-radius: 50px;
+  border: 1.5px solid var(--border_color);
+  margin: 0 auto; /* يوسط البحث */
+}
+
+.top_header .header_icon {
+  display: flex;
+  gap: 25px;
+  flex-shrink: 0; /* يمنع الأيقونات من التداخل */
+  justify-content: flex-end;
+  min-width: 150px;
+}
+
+/* --- Bottom Header Fix --- */
+.bottom-header {
+  background: var(--main_color);
+  height: 48px;
+}
+
+.bottom-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* يوسط اللينكات */
+  gap: 10px;
+}
+
+/* الـ Auth Section لجعلها في أقصى اليمين */
+.bottom-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
